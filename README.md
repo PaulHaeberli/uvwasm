@@ -10,5 +10,5 @@ Currently having problems on macOS Safari.
 
 Many thanks to Patricio González Vivo for creating glslViewer.
 
-This is based on his [code https://github.com/patriciogonzalezvivo/glslViewer](https://github.com/patriciogonzalezvivo/glslViewer)
+This is based on his code [https://github.com/patriciogonzalezvivo/glslViewer](https://github.com/patriciogonzalezvivo/glslViewer)
 
