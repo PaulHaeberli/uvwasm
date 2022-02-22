@@ -2,4 +2,4 @@
 
 DynaDraw
 
-(link)[https://paulhaeberli.github.io/uvwasm/]
+(Try it here!)[https://paulhaeberli.github.io/uvwasm/]
