@@ -6,5 +6,5 @@ DynaDraw
 
 Many thanks to Patricio González Vivo for creating glslViewer.
 
-This code is based on his code [https://github.com/patriciogonzalezvivo/glslViewer]
+This is based on his code [https://github.com/patriciogonzalezvivo/glslViewer]
 
