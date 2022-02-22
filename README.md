@@ -1,6 +1,6 @@
 # uvwasm
 
-DynaDraw
+DynaDraw running in your browser using Emscripten, wasm and webgl.
 
 [Try it here!](https://paulhaeberli.github.io/uvwasm/index.html)
 
