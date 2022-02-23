@@ -9,7 +9,7 @@ DynaDraw is a dynamic drawing program
 [Try DynaDraw](https://paulhaeberli.github.io/uvwasm/dynadraw/index.html)
 
 Click the button in the lower left corner to clear. The c++ source for this
-app is in uvDynaDraw.cpp, 208 lines.
+app is in uvDynaDraw.cpp, 204 lines.
 
 ### Ring
 
