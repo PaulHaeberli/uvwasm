@@ -16,6 +16,13 @@ Ring renders 3D graphics, with a UI to change the rendering.
 
 [Try Ring](https://paulhaeberli.github.io/uvwasm/ring/index.html)
 
+### MultiView
+
+A mini window manager.
+
+[Try MultiView](https://paulhaeberli.github.io/uvwasm/multiview/index.html)
+
+
 ### NOTE
 
 This runs fine on Firefox, Google Chrome, and Safari on iPad and iPhone.
