@@ -19,7 +19,7 @@ Ring renders 3D graphics, with a UI to change the rendering.
 ### MultiView
 
 A mini window manager. Prepare for glitch! The c++ source for the window
-manager is [here](https://paulhaeberli.github.io/uvwasm/WindowManager.cpp]
+manager is in 276 lines of c++ see WindowManager.cpp
 
 [Try MultiView](https://paulhaeberli.github.io/uvwasm/multiview/index.html)
 
