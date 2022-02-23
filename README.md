@@ -18,7 +18,7 @@ Ring renders 3D graphics, with a UI to change the rendering.
 
 ### MultiView
 
-A mini window manager.
+A mini window manager. Prepare for glitch!
 
 [Try MultiView](https://paulhaeberli.github.io/uvwasm/multiview/index.html)
 
