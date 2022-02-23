@@ -1,8 +1,19 @@
 # uvwasm
 
-DynaDraw running in your browser using Emscripten, wasm and webgl.
+DynaDraw and Ring running in your browser using Emscripten, wasm and webgl.
 
-[Try it here!](https://paulhaeberli.github.io/uvwasm/index.html)
+
+DynaDraw is a dynamic drawing program
+
+    [Try DynaDraw](https://paulhaeberli.github.io/uvwasm/dynadraw/index.html)
+
+Click the button in the lower left corner to clear.
+
+
+Ring renders 3D graphics, with a UI to change the rendering.
+
+    [Try Ring](https://paulhaeberli.github.io/uvwasm/ring/index.html)
+
 
 This runs fine on Firefox, Google Chrome, and Safari on iPad and iPhone.
 
