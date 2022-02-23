@@ -17,7 +17,7 @@ Ring renders 3D graphics, with a UI to change the rendering.
 
 NOTE: This runs fine on Firefox, Google Chrome, and Safari on iPad and iPhone.
 
-Currently having problems on macOS Safari.
+Currently having problems on macOS Safari. The font rendering is not quite right...
 
 
 Many thanks to Patricio González Vivo for creating glslViewer.
