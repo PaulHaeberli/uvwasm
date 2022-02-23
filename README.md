@@ -27,11 +27,16 @@ manager is in 276 lines of c++ see uvWindowManager.cpp
 
 ### NOTE
 
-This runs fine on Firefox, Google Chrome, and Safari on iPad and iPhone.
+On macOS: This runs fine on Firefox, Google Chrome. Currently having problems on macOS Safari.
 
-It also works on FireFox an ubuntu.
+On iOS: Fine on iPad and iPhone.
 
-Currently having problems on macOS Safari. The font rendering is not quite right...
+On Ubuntu: Fine on FireFox.
+
+On Windows: Fine Firefox, Chrome, and Edge
+
+The font rendering is not quite right...
+
 
 ### Thank you
 
