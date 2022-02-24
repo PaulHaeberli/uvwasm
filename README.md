@@ -1,6 +1,6 @@
 # uvwasm
 
-DynaDraw and Ring running in your browser using Emscripten, wasm and webgl.
+OpenGL applications running in your browser using Emscripten, wasm and webgl.
 
 ### DynaDraw
 
