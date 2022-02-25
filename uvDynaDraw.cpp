@@ -1,5 +1,4 @@
-#define CALC_RES        (2)
-#define DYNA_MAXWIDTH   (60.0)
+#define DYNA_MAXWIDTH   (uiinchtopix(2.0))
 
 // DynamicObject
 //
@@ -16,15 +15,12 @@ class DynamicObject {
   public:
     float mass = 2000.0;
     float drag = 0.008;
-    Point touch_pos;
-    Point last_pos;
-    Point last_vel;
-    Point cur_pos;
-    Point cur_vel;
-    double last_sec = 0.0;
+    Point touchPos;
+    Point lastPos, lastVel;
+    Point CurPos, CurVel;
     float width = DYNA_MAXWIDTH/2.0;
-    float last_width = DYNA_MAXWIDTH/2.0;
-    Point last_drawpos;
+    float lastWidth = DYNA_MAXWIDTH/2.0;
+    Point lastDrawPos;
     bool drawing = false;
     Path strokep;
 
@@ -37,37 +33,25 @@ class DynamicObject {
         return strokep;
     }
     void moveto(Point p) {
-        touch_pos = p;
-        last_pos = p;
-        last_vel = Point(0.0, 0.0);
-        cur_pos = p;
-        cur_vel = Point(0.0, 0.0);
-        last_drawpos = p;
-        last_sec = Utils.getdnow();
+        touchPos = p;
+        lastPos = p;
+        lastVel = Point(0.0, 0.0);
+        CurPos = p;
+        CurVel = Point(0.0, 0.0);
+        lastDrawPos = p;
         drawing = true;
     }
     void lineto(Point p) {
-        touch_pos = p;
-        double now = Utils.getdnow();
-        int deltat = round(1000.0*(now-last_sec));
-        int repcount = round(deltat/CALC_RES);
-        if (repcount>100)
-            repcount = 100;
-        if (repcount==0) 
-            return;
-        else
-            last_sec = now;
-        for (int i=0; i<repcount; i++) {
-            Point a = (touch_pos - cur_pos)/mass;
-            last_pos = cur_pos;
-            last_vel = cur_vel;
-            cur_vel += a;
-            cur_vel *= (1.0-drag);
-            cur_pos += cur_vel;
-        }
+        touchPos = p;
+        Point a = (touchPos - CurPos)/mass;
+        lastPos = CurPos;
+        lastVel = CurVel;
+        CurVel += a;
+        CurVel *= (1.0-drag);
+        CurPos += CurVel;
     }
     void lineto() {
-        lineto(touch_pos);
+        lineto(touchPos);
     }
     void endpath() {
         drawing = false;
@@ -80,15 +64,15 @@ class DynamicObject {
         return p+Point(delta*cosf(a),delta*sinf(a));
     }
     Rect draw() {
-        if (last_drawpos == cur_pos) {
+        if (lastDrawPos == CurPos) {
             return RectNull();
         } else {
             Path p;
             Point pos;
-            p.moveto(diagoffset(last_drawpos, -last_width/2.0));
-            p.lineto(diagoffset(cur_pos,           -width/2.0));
-            p.lineto(diagoffset(cur_pos,            width/2.0));
-            p.lineto(diagoffset(last_drawpos,  last_width/2.0));
+            p.moveto(diagoffset(lastDrawPos, -lastWidth/2.0));
+            p.lineto(diagoffset(CurPos,          -width/2.0));
+            p.lineto(diagoffset(CurPos,           width/2.0));
+            p.lineto(diagoffset(lastDrawPos,  lastWidth/2.0));
             p.closepath();
             p.setsimple();
             if (p.area()<0.0)
@@ -96,12 +80,14 @@ class DynamicObject {
             p.fill();
             p.stroke(0.1*uiinchtopix(0.01));
             strokep.append(p);
-            last_width = width;
-            last_drawpos = cur_pos;
+            lastWidth = width;
+            lastDrawPos = CurPos;
             return p.rect;
         }
     }
 };
+
+#define CALC_RES        (2)
 
 // uvDynaDrawApp
 //
@@ -110,72 +96,84 @@ class DynamicObject {
 class uvDynaDrawApp: public uv {
   public:
     Path p;
-    uvButton *button_clear;
-    uvSlider *sizeslider;
-    DynamicObject *dynaobj;
-    float cur_blend;
+    uvButton *buttonClear;
+    uvSlider *sizeSlider;
+    DynamicObject *dynaObj;
+    float curBlend;
+    double lastSec = 0.0;
 
     uvDynaDrawApp(const char *_name) {
         setclassname("uvDynaDrawApp");
         setname(_name);
 
-        subviewadd(sizeslider = new uvSlider("sizeslider", uiinchtopix(4.0)));
-        dynaobj = new DynamicObject();
-        subviewadd(button_clear = new uvButton("clear", "gen/img_button_blank.raw"));
+        subviewadd(sizeSlider = new uvSlider("sizeSlider", uiinchtopix(4.0)));
+        dynaObj = new DynamicObject();
+        subviewadd(buttonClear = new uvButton("clear", "gen/img_button_blank.raw"));
         settransparent(true);
     }
-    ~uvDynaDrawApp() {
-        fprintf(stderr, "DynaDrawApp: DEINIT\n");
-    }
-    void _drawsegment() {
-        backfbo.bind();
-        gl.initstate();
+    void _drawSegment() {
         gl.colorf(0.0, 0.0, 0.0, 1.0);
-        dodraw(dynaobj->draw());
+        dodraw(dynaObj->draw());
     }
     bool event(const char *msg) {
-        if (strequal(msg, "sizeslider.move")) {
-            float width = eventuv(uvSlider)->valueget();
-            dynaobj->setwidth(width);
+        if (strequal(msg, "sizeSlider.move")) {
+            float width = eventslidervalue();
+            dynaObj->setwidth(width);
             return true;
         }
         if (strequal(msg, "clear.doit")) {
-            dynaobj->clear();
-            cur_blend = 0.0;
+            dynaObj->clear();
+            curBlend = 0.0;
             animate(1.0);
             return true;
         }
         return false;
     }
     void animwork(float param) {
-        float a = sqrt(param);
         backfbo.bind();
         gl.initstate();
-        gl.colorwhite(a);
+        gl.colorwhite(sqrt(param));
         rect.fill();
         dodraw();
     }
     uv *click1(Point pos) {
-        dynaobj->moveto(pos);
+        lastSec = Utils.getdnow();
+        dynaObj->moveto(pos);
         timerset(0.0);
         if (anim)
             anim->stop();
         return this;
     }
     void move1(Point pos0, Point pos1) {
-        dynaobj->lineto(pos1);
-        _drawsegment();
+        backfbo.bind();
+        gl.initstate();
+        dynaObj->lineto(pos1);
+        _drawSegment();
     }
     void unclick1(Point pos) {
-        dynaobj->endpath();
+        dynaObj->endpath();
     }
     void timer() {
-        if (dynaobj->drawing) {
-            dynaobj->lineto();
-            _drawsegment();
+        if (dynaObj->drawing) {
+            backfbo.bind();
+            gl.initstate();
+            double now = Utils.getdnow();
+            int deltaT = round(1000.0*(now-lastSec));
+            int repCount = round(deltaT/CALC_RES);
+            if (repCount>100) repCount = 100;
+            if (repCount==0) 
+                return;
+            else
+                lastSec = now;
+            for(int rep = 0; rep<repCount; rep += repCount/2) {
+                for(int i=0; i<rep; i++)
+                    dynaObj->lineto();
+                _drawSegment();
+            }
             timerset(0.0);
         }
     }
+
     void layout(Rect r) {
         setrect(r);
         if (backfbo.rect != rect) {
@@ -186,16 +184,16 @@ class uvDynaDrawApp: public uv {
             gl.clearcolor(255, 255, 255, 255);
             gl.clearscreen();
         }
-        r = sizeslider->measure();
+        r = sizeSlider->measure();
         r = RectCenterInRect(rect, r);
-        r.origin.y = r.size.y;
-        sizeslider->layout(r);
-        r = button_clear->measure();
-        r.origin = Point(20+0.0, 20+0.0);
-        button_clear->layout(r);
+        r.origin.y = uiinchtopix(0.4);
+        sizeSlider->layout(r);
+        r = buttonClear->measure();
+        r.origin = Point(uiinchtopix(0.4), uiinchtopix(0.4));
+        buttonClear->layout(r);
         bool vis = rect.minsize() > uiinchtopix(1.0);
-        sizeslider->setvisible(vis);
-        button_clear->setvisible(vis);
+        sizeSlider->setvisible(vis);
+        buttonClear->setvisible(vis);
     }
     void drawview() {
         gl.colorwhite();
