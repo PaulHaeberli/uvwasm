@@ -28,7 +28,8 @@ manager is in 276 lines of c++ see uvWindowManager.cpp
 
 ### NOTE
 
-On macOS: This runs fine on Firefox, Google Chrome. Currently having problems on macOS Safari.
+On macOS: This runs fine on Firefox, Google Chrome. Currently having problems on macOS Safari on M1,
+macOS Safari on intel works.
 
 On iOS: Fine on iPad and iPhone.
 
