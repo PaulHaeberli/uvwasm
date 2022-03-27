@@ -25,6 +25,11 @@ manager is in 276 lines of c++ see uvWindowManager.cpp
 
 [Try MultiView](https://paulhaeberli.github.io/uvwasm/multiview/index.html)
 
+### Font Catalog
+
+Shows glyph generation and storage for font rendering.
+
+[Try FontCat](https://paulhaeberli.github.io/uvwasm/fontcat/index.html)
 
 ### NOTE
 
