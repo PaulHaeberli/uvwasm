@@ -203,7 +203,7 @@ var objAssign = Object.assign;
     }
   
    }
-   loadPackage({"files": [{"filename": "/Resources/system.Segoe UI Bold.ttf", "start": 0, "end": 36056}, {"filename": "/Resources/symdraw.03big.jpg", "start": 36056, "end": 996113}, {"filename": "/Resources/system.HelveticaNeue.ttf", "start": 996113, "end": 1316857}, {"filename": "/Resources/symdraw.03small.jpg", "start": 1316857, "end": 1362316}, {"filename": "/Resources/symdraw.02small.jpg", "start": 1362316, "end": 1393295}, {"filename": "/Resources/envsphere.Pearl03.jpg", "start": 1393295, "end": 1423115}, {"filename": "/Resources/obj3d.hole.obj", "start": 1423115, "end": 1508484}, {"filename": "/Resources/symdraw.01big.jpg", "start": 1508484, "end": 2398014}, {"filename": "/Resources/symdraw.info_about.jpg", "start": 2398014, "end": 2430349}, {"filename": "/Resources/obj3d.sixprong.obj", "start": 2430349, "end": 2813554}, {"filename": "/Resources/V.fsh", "start": 2813554, "end": 2813668}, {"filename": "/Resources/obj3d.shell.obj", "start": 2813668, "end": 3256507}, {"filename": "/Resources/obj3d.loftbone.obj", "start": 3256507, "end": 3345584}, {"filename": "/Resources/system.Segoe UI Italic.ttf", "start": 3345584, "end": 3386916}, {"filename": "/Resources/system.HelveticaNeueBold.ttf", "start": 3386916, "end": 3703048}, {"filename": "/Resources/envmap.EnvSphere03.jpg", "start": 3703048, "end": 3731638}, {"filename": "/Resources/envsphere.Steel03.jpg", "start": 3731638, "end": 3769338}, {"filename": "/Resources/system.Segoe UI Bold Italic.ttf", "start": 3769338, "end": 3811886}, {"filename": "/Resources/TRI.fsh", "start": 3811886, "end": 3811984}, {"filename": "/Resources/obj3d.cube.obj", "start": 3811984, "end": 3812673}, {"filename": "/Resources/envmap.EnvSphere01.jpg", "start": 3812673, "end": 3856505}, {"filename": "/Resources/system.HelveticaNeueMedium.ttf", "start": 3856505, "end": 4006285}, {"filename": "/Resources/symdraw.info_youtube.jpg", "start": 4006285, "end": 4040081}, {"filename": "/Resources/test.png", "start": 4040081, "end": 4061738}, {"filename": "/Resources/symdraw.info_tumblr.jpg", "start": 4061738, "end": 4091867}, {"filename": "/Resources/symdraw.02big.jpg", "start": 4091867, "end": 5240046}, {"filename": "/Resources/symdraw.00small.jpg", "start": 5240046, "end": 5280814}, {"filename": "/Resources/system.Segoe UI.ttf", "start": 5280814, "end": 5314978}, {"filename": "/Resources/symdraw.01small.jpg", "start": 5314978, "end": 5348281}, {"filename": "/Resources/symdraw.info_help.jpg", "start": 5348281, "end": 5376696}, {"filename": "/Resources/symdraw.info_email.jpg", "start": 5376696, "end": 5409558}, {"filename": "/Resources/symdraw.info_website.jpg", "start": 5409558, "end": 5442598}, {"filename": "/Resources/symdraw.00big.jpg", "start": 5442598, "end": 5925398}, {"filename": "/Resources/symdraw.info_review.jpg", "start": 5925398, "end": 5957979}, {"filename": "/Resources/system.HelveticaNeueLight.ttf", "start": 5957979, "end": 6130151}, {"filename": "/Resources/symdraw.flood.png", "start": 6130151, "end": 6163315}, {"filename": "/Resources/obj3d.implic.obj", "start": 6163315, "end": 7696443}, {"filename": "/Resources/TRI.vsh", "start": 7696443, "end": 7696628}, {"filename": "/Resources/obj3d.quad.obj", "start": 7696628, "end": 7755138}, {"filename": "/Resources/envsphere.SoapBubble01.jpg", "start": 7755138, "end": 7804617}, {"filename": "/Resources/envsphere.Gleam.jpg", "start": 7804617, "end": 7835095}, {"filename": "/Resources/V.vsh", "start": 7835095, "end": 7835297}, {"filename": "/Resources/symdraw.info_instagram.jpg", "start": 7835297, "end": 7869013}], "remote_package_size": 7869013, "package_uuid": "56637d11-a5d1-49c2-a959-c9b43a8f9979"});
+   loadPackage({"files": [{"filename": "/Resources/system.Segoe-UI-Italic.ttf", "start": 0, "end": 41332}, {"filename": "/Resources/symdraw.03big.jpg", "start": 41332, "end": 1001389}, {"filename": "/Resources/system.HelveticaNeue.ttf", "start": 1001389, "end": 1322133}, {"filename": "/Resources/system.HelveticaNeueUltraLight.ttf", "start": 1322133, "end": 1494317}, {"filename": "/Resources/symdraw.03small.jpg", "start": 1494317, "end": 1539776}, {"filename": "/Resources/symdraw.02small.jpg", "start": 1539776, "end": 1570755}, {"filename": "/Resources/system.Mod.ttf", "start": 1570755, "end": 1581139}, {"filename": "/Resources/system.Go-Italic.ttf", "start": 1581139, "end": 1719727}, {"filename": "/Resources/envsphere.Pearl03.jpg", "start": 1719727, "end": 1749547}, {"filename": "/Resources/system.Segoe-UI.ttf", "start": 1749547, "end": 1783711}, {"filename": "/Resources/system.Ligon-Bold.ttf", "start": 1783711, "end": 1801331}, {"filename": "/Resources/obj3d.hole.obj", "start": 1801331, "end": 1886700}, {"filename": "/Resources/symdraw.01big.jpg", "start": 1886700, "end": 2776230}, {"filename": "/Resources/symdraw.info_about.jpg", "start": 2776230, "end": 2808565}, {"filename": "/Resources/obj3d.sixprong.obj", "start": 2808565, "end": 3191770}, {"filename": "/Resources/V.fsh", "start": 3191770, "end": 3191884}, {"filename": "/Resources/obj3d.shell.obj", "start": 3191884, "end": 3634723}, {"filename": "/Resources/obj3d.loftbone.obj", "start": 3634723, "end": 3723800}, {"filename": "/Resources/system.Ligon-Oblique.ttf", "start": 3723800, "end": 3742836}, {"filename": "/Resources/system.HelveticaNeueBold.ttf", "start": 3742836, "end": 4058968}, {"filename": "/Resources/envmap.EnvSphere03.jpg", "start": 4058968, "end": 4087558}, {"filename": "/Resources/envsphere.Steel03.jpg", "start": 4087558, "end": 4125258}, {"filename": "/Resources/TRI.fsh", "start": 4125258, "end": 4125356}, {"filename": "/Resources/obj3d.cube.obj", "start": 4125356, "end": 4126045}, {"filename": "/Resources/envmap.EnvSphere01.jpg", "start": 4126045, "end": 4169877}, {"filename": "/Resources/system.HelveticaNeueMedium.ttf", "start": 4169877, "end": 4319657}, {"filename": "/Resources/symdraw.info_youtube.jpg", "start": 4319657, "end": 4353453}, {"filename": "/Resources/test.png", "start": 4353453, "end": 4375110}, {"filename": "/Resources/system.Go-Medium-Italic.ttf", "start": 4375110, "end": 4521606}, {"filename": "/Resources/symdraw.info_tumblr.jpg", "start": 4521606, "end": 4551735}, {"filename": "/Resources/system.Mod-Italic.ttf", "start": 4551735, "end": 4562555}, {"filename": "/Resources/symdraw.02big.jpg", "start": 4562555, "end": 5710734}, {"filename": "/Resources/symdraw.00small.jpg", "start": 5710734, "end": 5751502}, {"filename": "/Resources/symdraw.01small.jpg", "start": 5751502, "end": 5784805}, {"filename": "/Resources/symdraw.info_help.jpg", "start": 5784805, "end": 5813220}, {"filename": "/Resources/symdraw.info_email.jpg", "start": 5813220, "end": 5846082}, {"filename": "/Resources/symdraw.info_website.jpg", "start": 5846082, "end": 5879122}, {"filename": "/Resources/symdraw.00big.jpg", "start": 5879122, "end": 6361922}, {"filename": "/Resources/symdraw.info_review.jpg", "start": 6361922, "end": 6394503}, {"filename": "/Resources/system.HelveticaNeueLight.ttf", "start": 6394503, "end": 6566675}, {"filename": "/Resources/symdraw.flood.png", "start": 6566675, "end": 6599839}, {"filename": "/Resources/system.Ligon-BoldOblique.ttf", "start": 6599839, "end": 6617183}, {"filename": "/Resources/system.Segoe-UI-Bold.ttf", "start": 6617183, "end": 6653239}, {"filename": "/Resources/system.Go-Bold.ttf", "start": 6653239, "end": 6792195}, {"filename": "/Resources/obj3d.implic.obj", "start": 6792195, "end": 8325323}, {"filename": "/Resources/system.Segoe-UI-Bold-Italic.ttf", "start": 8325323, "end": 8367871}, {"filename": "/Resources/TRI.vsh", "start": 8367871, "end": 8368056}, {"filename": "/Resources/obj3d.quad.obj", "start": 8368056, "end": 8426566}, {"filename": "/Resources/envsphere.SoapBubble01.jpg", "start": 8426566, "end": 8476045}, {"filename": "/Resources/system.Go-Regular.ttf", "start": 8476045, "end": 8611033}, {"filename": "/Resources/envsphere.Gleam.jpg", "start": 8611033, "end": 8641511}, {"filename": "/Resources/V.vsh", "start": 8641511, "end": 8641713}, {"filename": "/Resources/symdraw.info_instagram.jpg", "start": 8641713, "end": 8675429}, {"filename": "/Resources/system.Ligon-Roman.ttf", "start": 8675429, "end": 8694757}, {"filename": "/Resources/system.Go-Bold-Italic.ttf", "start": 8694757, "end": 8836629}, {"filename": "/Resources/system.Go-Medium.ttf", "start": 8836629, "end": 8978997}], "remote_package_size": 8978997, "package_uuid": "03d26811-e597-4e24-8664-6780b5721570"});
   
   })();
   
@@ -8263,6 +8263,10 @@ var ASM_CONSTS = {
       GLFW.setWindowSize(winid, width, height);
     }
 
+  function _glfwSetWindowTitle(winid, title) {
+      GLFW.setWindowTitle(winid, title);
+    }
+
   function _glfwTerminate() {
       window.removeEventListener("gamepadconnected", GLFW.onGamepadConnected, true);
       window.removeEventListener("gamepaddisconnected", GLFW.onGamepadDisconnected, true);
@@ -9072,6 +9076,7 @@ var asmLibraryArg = {
   "glfwSetScrollCallback": _glfwSetScrollCallback,
   "glfwSetWindowPos": _glfwSetWindowPos,
   "glfwSetWindowSize": _glfwSetWindowSize,
+  "glfwSetWindowTitle": _glfwSetWindowTitle,
   "glfwTerminate": _glfwTerminate,
   "glfwWindowHint": _glfwWindowHint,
   "invoke_ii": invoke_ii,
@@ -9090,16 +9095,16 @@ var asm = createWasm();
 var ___wasm_call_ctors = Module["___wasm_call_ctors"] = createExportWrapper("__wasm_call_ctors");
 
 /** @type {function(...*):?} */
-var _malloc = Module["_malloc"] = createExportWrapper("malloc");
-
-/** @type {function(...*):?} */
-var _free = Module["_free"] = createExportWrapper("free");
-
-/** @type {function(...*):?} */
 var _main = Module["_main"] = createExportWrapper("main");
 
 /** @type {function(...*):?} */
+var _malloc = Module["_malloc"] = createExportWrapper("malloc");
+
+/** @type {function(...*):?} */
 var ___errno_location = Module["___errno_location"] = createExportWrapper("__errno_location");
+
+/** @type {function(...*):?} */
+var _free = Module["_free"] = createExportWrapper("free");
 
 /** @type {function(...*):?} */
 var _saveSetjmp = Module["_saveSetjmp"] = createExportWrapper("saveSetjmp");
